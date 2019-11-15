@@ -1,0 +1,41 @@
+{
+  "name": "share-me",
+  "version": "0.1.0",
+  "description": "Shares all your shit",
+  "author": "ayan4m1 <andrew@bulletlogic.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp",
+    "develop": "gulp watch",
+    "test": "jest",
+    "view:coverage": "opener ./coverage/index.html"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-transform-regenerator": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-prettier": "^3.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.3",
+    "opener": "^1.5.1",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.0"
+  }
+}
