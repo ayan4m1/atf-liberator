@@ -87,7 +87,7 @@ const execute = async () => {
       successCount++;
     }
 
-    log.info(`Completed making ${successCount} of ${recipes.length} public`);
+    log.info(`Completed making ${successCount} of ${recipes.length} public!`);
   } catch (error) {
     log.error(error.message, error);
   }
