@@ -1,7 +1,7 @@
 {
-  "name": "share-me",
+  "name": "atf-liberator",
   "version": "0.1.0",
-  "description": "Shares all your shit",
+  "description": "Shares all your ATF recipes",
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
   "scripts": {
