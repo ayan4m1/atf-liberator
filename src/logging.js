@@ -1,9 +1,6 @@
 import { Container, format, transports } from 'winston';
 
-import configs from './config';
-
 const { combine, label, prettyPrint, printf, timestamp } = format;
-const { logging: config } = configs;
 
 const loggers = {};
 const container = new Container();
@@ -12,17 +9,15 @@ const createLogger = (category, categoryLabel) => {
   let formatter = data => `[${data.level}][${data.label}] ${data.message}`;
   const formatters = [label({ label: categoryLabel })];
 
-  if (config.timestamp !== false) {
-    formatters.push(timestamp({ format: config.timestamp }));
-    formatter = data =>
-      `${data.timestamp} [${data.level}][${data.label}] ${data.message}`;
-  }
+  formatters.push(timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }));
+  formatter = data =>
+    `${data.timestamp} [${data.level}][${data.label}] ${data.message}`;
 
   formatters.push(prettyPrint(), printf(formatter));
   container.add(category, {
     transports: [
       new transports.Console({
-        level: config.level,
+        level: 'info',
         format: combine.apply(null, formatters)
       })
     ]
